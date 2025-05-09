@@ -12,9 +12,12 @@ import {
   FaFire
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 function Courses() {
   // Course data
+
+  const navigate= useNavigate();
   const upcomingCourses = [
     {
       id: 1,
@@ -36,6 +39,9 @@ function Courses() {
     },
   ];
 
+  const handleNavigation = ()=>{
+    navigate("/courses");
+};
   const availableCourses = [
     {
       id: 2,
@@ -127,9 +133,9 @@ function Courses() {
       </div>
       
       {/* Bookmark button */}
-      <button className="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 bg-black/50 p-2 rounded-full backdrop-blur-md text-white hover:bg-[#9E67FF]/70 transition-all duration-300 transform translate-y-2 group-hover:translate-y-16">
+      {/* <button className="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 bg-black/50 p-2 rounded-full backdrop-blur-md text-white hover:bg-[#9E67FF]/70 transition-all duration-300 transform translate-y-2 group-hover:translate-y-16">
         <FaBookmark />
-      </button>
+      </button> */}
       
       {/* Course Image */}
       <div className="relative h-52 overflow-hidden">
@@ -145,7 +151,7 @@ function Courses() {
           <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-lg">{course.title}</h3>
           
           {/* Rating and Students */}
-          <div className="flex items-center justify-between">
+          {/* <div className="flex items-center justify-between">
             <div className="flex items-center">
               <div className="flex items-center mr-3">
                 {[...Array(5)].map((_, i) => (
@@ -155,7 +161,7 @@ function Courses() {
               </div>
               <span className="text-gray-300 text-xs">{course.students} students</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       
@@ -247,11 +253,11 @@ function Courses() {
               <div className="bg-[#9E67FF]/10 p-2 rounded-lg">
                 <FaCertificate className="text-[#9E67FF] text-2xl" />
               </div>
-              <h3 className="text-2xl font-bold text-white">Available Now</h3>
+              <h3 className="text-2xl font-bold text-white">Top Courses</h3>
             </div>
             <button
-              className="group flex items-center text-gray-300 hover:text-white transition-colors duration-300 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full px-5 py-2"
-              onClick={() => console.log("Navigate to all courses")}
+              className="group cursor-pointer flex items-center text-gray-300 hover:text-white transition-colors duration-300 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full px-5 py-2"
+              onClick={handleNavigation}
             >
               <span className="mr-2 text-sm font-medium">
                 Explore All Courses

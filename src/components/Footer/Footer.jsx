@@ -1,23 +1,22 @@
 import React from "react";
 import { FaLinkedin, FaTwitter, FaInstagram, FaDiscord, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
-
+import logo from "../../assets/logowithname.svg"
 function Footer() {
   const currentYear = new Date().getFullYear();
   
   const navLinks = [
-    { name: "About Us", href: "/about" },
-    { name: "Courses", href: "/courses" },
-    { name: "Community", href: "/community" },
-    { name: "Blog", href: "/blog" },
-    { name: "Terms & Privacy", href: "/terms" }
+    { name: "About Us", href: "/" },
+    { name: "Courses", href: "/" },
+    { name: "Community", href: "/" },
+    { name: "Blog", href: "/" },
+    { name: "Terms & Privacy", href: "/" }
   ];
   
   const socialLinks = [
     { icon: <FaLinkedin size={20} />, href: "https://linkedin.com", label: "LinkedIn" },
     { icon: <FaTwitter size={20} />, href: "https://twitter.com", label: "Twitter" },
     { icon: <FaInstagram size={20} />, href: "https://instagram.com", label: "Instagram" },
-    { icon: <FaDiscord size={20} />, href: "https://discord.com", label: "Discord" }
   ];
 
   const containerVariants = {
@@ -52,24 +51,12 @@ function Footer() {
           {/* Logo and Description */}
           <div className="md:col-span-4">
             <div className="mb-4">
-              <h2 className="text-2xl font-bold text-white flex items-center">
-                <span className="bg-gradient-to-r from-[#9E67FF] to-[#013E5C] w-8 h-8 flex items-center justify-center rounded mr-2">S</span>
-                Square
-              </h2>
+              <img src={logo} alt="Logo" className="w-[20%]"/>
             </div>
             <p className="text-gray-400 mb-6 pr-4">
               Redefining tech education with real-world projects, mentorship, and a thriving community of learners and creators.
             </p>
-            <div className="flex items-center">
-              <div className="bg-white/10 rounded-l-lg px-4 py-2 border-r border-white/10">
-                <FaEnvelope className="text-[#9E67FF]" />
-              </div>
-              <input 
-                type="email" 
-                placeholder="Join our newsletter" 
-                className="bg-white/5 rounded-r-lg py-2 px-4 focus:outline-none focus:ring-1 focus:ring-[#9E67FF] border border-white/10 border-l-0 w-full" 
-              />
-            </div>
+            
           </div>
           
           {/* Quick Links */}
@@ -106,8 +93,8 @@ function Footer() {
               <div className="absolute -bottom-1 left-0 w-12 h-0.5 bg-[#9E67FF]"></div>
             </h3>
             <div className="space-y-3 text-gray-400">
-              <p>hello@squareeducation.com</p>
-              <p>+1 (555) 123-4567</p>
+              <p>support@thesquareducation.com</p>
+              
               <p>123 Tech Plaza, San Francisco, CA</p>
             </div>
           </div>
@@ -138,9 +125,9 @@ function Footer() {
         <div className="pt-8 mt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
           <p>© {currentYear} The Square Education. All rights reserved.</p>
           <div className="mt-4 md:mt-0 flex gap-6">
-            <a href="/privacy" className="hover:text-[#9E67FF] transition-colors duration-300">Privacy Policy</a>
-            <a href="/terms" className="hover:text-[#9E67FF] transition-colors duration-300">Terms of Use</a>
-            <a href="/cookies" className="hover:text-[#9E67FF] transition-colors duration-300">Cookies</a>
+            <a href="/" className="hover:text-[#9E67FF] transition-colors duration-300">Privacy Policy</a>
+            <a href="/" className="hover:text-[#9E67FF] transition-colors duration-300">Terms of Use</a>
+            {/* <a href="/cookies" className="hover:text-[#9E67FF] transition-colors duration-300">Cookies</a> */}
           </div>
         </div>
       </div>
