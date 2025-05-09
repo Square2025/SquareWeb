@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import logo from "../../assets/logowithname.svg";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
+  const navigate =useNavigate()
   // Listen for scroll events
   useEffect(() => {
     const handleScroll = () => {
@@ -37,13 +38,16 @@ function Header() {
     }
   }, [mobileMenuOpen]);
   
+  const handleNavigation =()=>[
+    navigate("/")
+  ]
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled ? 'bg-black/30 backdrop-blur-md shadow-lg shadow-black/10 py-3' : 'bg-transparent py-6 md:py-10'
     }`}>
       <div className="flex items-center justify-between px-4 md:px-10 w-full">
         <div className="w-[50%] md:w-[70%]">
-          <img src={logo} alt="Logo" className="transition-all duration-300 max-w-full h-auto" />
+          <img src={logo} alt="Logo" className="transition-all duration-300 max-w-full h-auto" onClick={handleNavigation} />
         </div>
         
         {/* Desktop Navigation */}

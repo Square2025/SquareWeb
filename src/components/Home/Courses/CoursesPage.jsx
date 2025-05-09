@@ -360,7 +360,7 @@ function CoursesPage() {
       <Header />
       
       {/* Page Hero Section */}
-      <div className="relative pt-20 pb-12 px-4 md:px-10">
+      <div className="relative pt-40 pb-12 px-4 md:px-10">
         <motion.div 
           className="max-w-7xl mx-auto text-center relative z-10"
           initial={{ opacity: 0, y: -20 }}
