@@ -6,18 +6,18 @@ import Courses from "./Courses/Courses";
 import WhySquare from "./WhySquare/WhySquare";
 import Footer from "../Footer/Footer";
 import { motion } from "framer-motion";
-import { TypeAnimation } from 'react-type-animation';
+import { TypeAnimation } from "react-type-animation";
 
 function Home() {
   return (
     <section className="bg-gradient-to-r from-[#181818] from-[0%] to-[#013E5C] to-[100%] h-full overflow-x-hidden">
       <Header />
-      
+
       {/* Hero Section - Responsive padding and layout */}
       <div className="pt-24 md:pt-32 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 px-4 md:px-10 py-12 md:py-20 gap-8 md:gap-0">
           {/* Text content - Full width on mobile, half on desktop */}
-          <motion.div 
+          <motion.div
             className="col-span-1 text-white space-y-5 order-2 md:order-1"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -39,7 +39,7 @@ function Home() {
                 className="leading-tight"
               />
             </div>
-            <motion.div 
+            <motion.div
               className="w-full md:w-[300px] text-sm md:text-base"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -49,7 +49,7 @@ function Home() {
               fostering a lifelong love of learning. Discover innovative courses
               and tools that empower you to excel.
             </motion.div>
-            <motion.div 
+            <motion.div
               className="bg-[#9E67FF] w-full md:w-auto md:inline-block text-center py-2 px-6 rounded-md cursor-pointer hover:drop-shadow-md hover:drop-shadow-white/40 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -60,43 +60,44 @@ function Home() {
               Join Now
             </motion.div>
           </motion.div>
-          
-          {/* Hero image - Full width on mobile, half on desktop */}
-          <motion.div 
-            className="col-span-1 order-1 md:order-2 flex items-start justify-center md:justify-end"
+
+          {/* Hero image - Adjusted positioning with mt-negative value and self-center */}
+          <motion.div
+            className="col-span-1 order-1 md:order-2 flex items-center md:items-start justify-center md:justify-end md:-mt-8"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <motion.img 
-              src={Hero} 
-              alt="Characters" 
+            <motion.img
+              src={Hero}
+              alt="Characters"
               className="max-w-full h-auto md:w-full"
-              animate={{ 
+              animate={{
                 y: [0, -15, 0],
               }}
-              transition={{ 
-                repeat: Infinity, 
+              transition={{
+                repeat: Infinity,
                 duration: 3,
-                ease: "easeInOut" 
+                ease: "easeInOut",
               }}
             />
           </motion.div>
         </div>
       </div>
-      
+
       {/* Other sections */}
       <div>
         <LRCSection />
       </div>
       <div>
-        <Courses/>
-      </div>
-      <div>
         <WhySquare />
       </div>
       <div>
-        <Footer/>
+        <Courses />
+      </div>
+
+      <div>
+        <Footer />
       </div>
     </section>
   );

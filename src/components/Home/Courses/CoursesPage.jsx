@@ -16,11 +16,13 @@ import {
   FaCode
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useNavigate } from 'react-router-dom';
 
 function CoursesPage() {
   // State for active category filter
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
 
   // Sample course data in same format as home page
   const allCourses = {
@@ -334,7 +336,7 @@ function CoursesPage() {
         </div>
         
         {/* CTA Button */}
-        <button className="w-full py-3 rounded-xl font-medium transition-all duration-300 relative overflow-hidden group-hover:shadow-lg">
+        <button onClick={()=>{navigate("/pre-course")}} className="w-full cursor-pointer py-3 rounded-xl font-medium transition-all duration-300 relative overflow-hidden group-hover:shadow-lg">
           <div className="absolute inset-0 bg-gradient-to-r from-[#9E67FF] to-[#6E45B5] opacity-90"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-[#9E67FF] to-[#013E5C] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           <span className="relative z-10 flex items-center justify-center text-white">

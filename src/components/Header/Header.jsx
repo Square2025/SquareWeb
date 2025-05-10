@@ -55,7 +55,7 @@ function Header() {
           <a href="/" className="cursor-pointer hover:text-white transition-colors duration-200">Home</a>
           <a href="/courses" className="cursor-pointer hover:text-white transition-colors duration-200">Courses</a>
           <a href="#" className="cursor-pointer hover:text-white transition-colors duration-200">About</a>
-          <a href="#" className="cursor-pointer hover:text-white transition-colors duration-200">Contact</a>
+          <a href="/contact" className="cursor-pointer hover:text-white transition-colors duration-200">Contact</a>
         </nav>
         
         {/* Mobile Menu Button */}

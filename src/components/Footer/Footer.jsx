@@ -7,14 +7,14 @@ function Footer() {
   
   const navLinks = [
     { name: "About Us", href: "/" },
-    { name: "Courses", href: "/" },
+    { name: "Courses", href: "/courses" },
     { name: "Community", href: "/" },
-    { name: "Blog", href: "/" },
+    // { name: "Blog", href: "/" },
     { name: "Terms & Privacy", href: "/" }
   ];
   
   const socialLinks = [
-    { icon: <FaLinkedin size={20} />, href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: <FaLinkedin size={20} />, href: "https://www.linkedin.com/company/thesquareducation/", label: "LinkedIn" },
     { icon: <FaTwitter size={20} />, href: "https://twitter.com", label: "Twitter" },
     { icon: <FaInstagram size={20} />, href: "https://instagram.com", label: "Instagram" },
   ];
@@ -93,9 +93,9 @@ function Footer() {
               <div className="absolute -bottom-1 left-0 w-12 h-0.5 bg-[#9E67FF]"></div>
             </h3>
             <div className="space-y-3 text-gray-400">
-              <p>support@thesquareducation.com</p>
+              <p>hr@thesquareducation.com</p>
               
-              <p>123 Tech Plaza, San Francisco, CA</p>
+              <p>63 A,Ramnagar,Nagpur</p>
             </div>
           </div>
           

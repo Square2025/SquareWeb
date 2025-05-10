@@ -43,42 +43,42 @@ function Courses() {
     navigate("/courses");
 };
   const availableCourses = [
-    {
-      id: 2,
-      title: "Web Development Bootcamp",
-      description:
-        "Master modern web development with React, Node.js, and more. Build a complete portfolio of projects.",
-      status: "available",
-      features: [
-        { icon: <FaCalendarAlt />, text: "8 weeks of structured learning" },
-        { icon: <FaUserTie />, text: "Weekly code reviews" },
-        { icon: <FaTools />, text: "5 portfolio-ready projects" },
-        { icon: <FaCertificate />, text: "Industry-recognized certification" },
-      ],
-      badge: "Bestseller",
-      rating: 4.8,
-      students: 1240,
-      image:
-        "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=500&auto=format&fit=crop",
-    },
-    {
-      id: 3,
-      title: "Data Science Fundamentals",
-      description:
-        "From statistics to machine learning. Learn to extract insights from data and build predictive models.",
-      status: "available",
-      features: [
-        { icon: <FaCalendarAlt />, text: "10 weeks comprehensive curriculum" },
-        { icon: <FaUserTie />, text: "Mentorship from data scientists" },
-        { icon: <FaTools />, text: "Real-world data projects" },
-        { icon: <FaBriefcase />, text: "Job placement assistance" },
-      ],
-      badge: "Trending",
-      rating: 4.7,
-      students: 980,
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=500&auto=format&fit=crop",
-    },
+    // {
+    //   id: 2,
+    //   title: "Web Development Bootcamp",
+    //   description:
+    //     "Master modern web development with React, Node.js, and more. Build a complete portfolio of projects.",
+    //   status: "available",
+    //   features: [
+    //     { icon: <FaCalendarAlt />, text: "8 weeks of structured learning" },
+    //     { icon: <FaUserTie />, text: "Weekly code reviews" },
+    //     { icon: <FaTools />, text: "5 portfolio-ready projects" },
+    //     { icon: <FaCertificate />, text: "Industry-recognized certification" },
+    //   ],
+    //   badge: "Bestseller",
+    //   rating: 4.8,
+    //   students: 1240,
+    //   image:
+    //     "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=500&auto=format&fit=crop",
+    // },
+    // {
+    //   id: 3,
+    //   title: "Data Science Fundamentals",
+    //   description:
+    //     "From statistics to machine learning. Learn to extract insights from data and build predictive models.",
+    //   status: "available",
+    //   features: [
+    //     { icon: <FaCalendarAlt />, text: "10 weeks comprehensive curriculum" },
+    //     { icon: <FaUserTie />, text: "Mentorship from data scientists" },
+    //     { icon: <FaTools />, text: "Real-world data projects" },
+    //     { icon: <FaBriefcase />, text: "Job placement assistance" },
+    //   ],
+    //   badge: "Trending",
+    //   rating: 4.7,
+    //   students: 980,
+    //   image:
+    //     "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=500&auto=format&fit=crop",
+    // },
   ];
 
   // Animation variants
@@ -107,6 +107,7 @@ function Courses() {
   const CourseCard = ({ course }) => (
     <motion.div 
       variants={itemVariants}
+    
       className="relative overflow-hidden rounded-2xl border border-white/10 shadow-xl backdrop-blur-sm bg-gradient-to-br from-black/60 to-[#121225]/80 group hover:shadow-2xl hover:shadow-[#9E67FF]/10 transition-all duration-500"
     >
       {/* Badge */}
@@ -180,7 +181,7 @@ function Courses() {
         </div>
         
         {/* CTA Button */}
-        <button className="w-full py-3 rounded-xl font-medium transition-all duration-300 relative overflow-hidden group-hover:shadow-lg">
+        <button onClick={()=>{navigate("/pre-course")}} className="w-full cursor-pointer py-3 rounded-xl font-medium transition-all duration-300 relative overflow-hidden group-hover:shadow-lg">
           <div className="absolute inset-0 bg-gradient-to-r from-[#9E67FF] to-[#6E45B5] opacity-90"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-[#9E67FF] to-[#013E5C] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           <span className="relative z-10 flex items-center justify-center text-white">
@@ -248,30 +249,33 @@ function Courses() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-10">
-            <div className="flex items-center space-x-4 mb-4 md:mb-0">
-              <div className="bg-[#9E67FF]/10 p-2 rounded-lg">
-                <FaCertificate className="text-[#9E67FF] text-2xl" />
+          {availableCourses.length > 0 && (
+            <>        
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-10">
+                <div className="flex items-center space-x-4 mb-4 md:mb-0">
+                  <div className="bg-[#9E67FF]/10 p-2 rounded-lg">
+                    <FaCertificate className="text-[#9E67FF] text-2xl" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">Top Courses</h3>
+                </div>
+                <button
+                  className="group cursor-pointer flex items-center text-gray-300 hover:text-white transition-colors duration-300 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full px-5 py-2"
+                  onClick={handleNavigation}
+                >
+                  <span className="mr-2 text-sm font-medium">
+                    Explore All Courses
+                  </span>
+                  <FaArrowRight className="text-sm transform group-hover:translate-x-1 transition-transform duration-300" />
+                </button>
               </div>
-              <h3 className="text-2xl font-bold text-white">Top Courses</h3>
-            </div>
-            <button
-              className="group cursor-pointer flex items-center text-gray-300 hover:text-white transition-colors duration-300 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full px-5 py-2"
-              onClick={handleNavigation}
-            >
-              <span className="mr-2 text-sm font-medium">
-                Explore All Courses
-              </span>
-              <FaArrowRight className="text-sm transform group-hover:translate-x-1 transition-transform duration-300" />
-            </button>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {availableCourses.map((course) => (
-              <CourseCard key={course.id} course={course} />
-            ))}
-          </div>
-          
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {availableCourses.map((course) => (
+                  <CourseCard key={course.id} course={course} />
+                ))}
+              </div>
+            </>
+          )}
           {/* Floating Decoration - Fixed positioning */}
           <div className="hidden md:block absolute right-0 top-1/2 w-40 h-40 bg-[#9E67FF] rounded-full filter blur-[80px] opacity-5 z-0"></div>
           <div className="hidden md:block absolute left-0 bottom-1/4 w-40 h-40 bg-[#013E5C] rounded-full filter blur-[80px] opacity-5 z-0"></div>
