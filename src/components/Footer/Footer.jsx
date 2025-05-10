@@ -2,15 +2,17 @@ import React from "react";
 import { FaLinkedin, FaTwitter, FaInstagram, FaDiscord, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
 import logo from "../../assets/logowithname.svg"
+import { Link } from "react-router-dom";
+
 function Footer() {
   const currentYear = new Date().getFullYear();
   
   const navLinks = [
-    { name: "About Us", href: "/" },
-    { name: "Courses", href: "/courses" },
-    { name: "Community", href: "/" },
-    // { name: "Blog", href: "/" },
-    { name: "Terms & Privacy", href: "/" }
+    { name: "About Us", navigate: "/" },
+    { name: "Courses", navigate: "/courses" },
+    { name: "Community", navigate: "/" },
+    // { name: "Blog", navigate: "/" },
+    { name: "Terms & Privacy", navigate: "/" }
   ];
   
   const socialLinks = [
@@ -74,13 +76,13 @@ function Footer() {
             >
               {navLinks.map((link, index) => (
                 <motion.li key={index} variants={itemVariants}>
-                  <a 
-                    href={link.href} 
+                  <Link 
+                    to={link.navigate} 
                     className="hover:text-[#9E67FF] transition-colors duration-300 flex items-center"
                   >
                     <span className="w-1.5 h-1.5 bg-[#9E67FF] rounded-full mr-2 opacity-70"></span>
                     {link.name}
-                  </a>
+                  </Link>
                 </motion.li>
               ))}
             </motion.ul>
@@ -125,9 +127,9 @@ function Footer() {
         <div className="pt-8 mt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
           <p>© {currentYear} The Square Education. All rights reserved.</p>
           <div className="mt-4 md:mt-0 flex gap-6">
-            <a href="/" className="hover:text-[#9E67FF] transition-colors duration-300">Privacy Policy</a>
-            <a href="/" className="hover:text-[#9E67FF] transition-colors duration-300">Terms of Use</a>
-            {/* <a href="/cookies" className="hover:text-[#9E67FF] transition-colors duration-300">Cookies</a> */}
+            <Link to="/privacy" className="hover:text-[#9E67FF] transition-colors duration-300">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-[#9E67FF] transition-colors duration-300">Terms of Use</Link>
+            {/* <Link to="/cookies" className="hover:text-[#9E67FF] transition-colors duration-300">Cookies</Link> */}
           </div>
         </div>
       </div>
