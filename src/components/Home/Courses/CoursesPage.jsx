@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useNavigate } from 'react-router-dom';
+import Footer from '../../Footer/Footer';
 
 function CoursesPage() {
   // State for active category filter
@@ -461,6 +462,11 @@ function CoursesPage() {
       {/* Floating decorations */}
       <div className="hidden md:block fixed right-0 top-1/2 w-40 h-40 bg-[#9E67FF] rounded-full filter blur-[80px] opacity-5 z-0"></div>
       <div className="hidden md:block fixed left-0 bottom-1/4 w-40 h-40 bg-[#013E5C] rounded-full filter blur-[80px] opacity-5 z-0"></div>
+      <div>
+      <div>
+        <Footer/>
+      </div>
+      </div>
     </section>
   );
 }

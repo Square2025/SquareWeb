@@ -8,11 +8,12 @@ function Footer() {
   const currentYear = new Date().getFullYear();
   
   const navLinks = [
-    { name: "About Us", navigate: "/" },
+    { name: "About Us", navigate: "/about" },
     { name: "Courses", navigate: "/courses" },
     { name: "Community", navigate: "/" },
     // { name: "Blog", navigate: "/" },
-    { name: "Terms & Privacy", navigate: "/" }
+    { name: "Terms ", navigate: "/terms" },
+    { name: "Privacy ", navigate: "/privacy" }
   ];
   
   const socialLinks = [
@@ -56,7 +57,7 @@ function Footer() {
               <img src={logo} alt="Logo" className="w-[20%]"/>
             </div>
             <p className="text-gray-400 mb-6 pr-4">
-              Redefining tech education with real-world projects, mentorship, and a thriving community of learners and creators.
+            Where skills keep you away from the corners.
             </p>
             
           </div>

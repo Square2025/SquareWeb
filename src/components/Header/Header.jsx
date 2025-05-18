@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from "react";
 import logo from "../../assets/logowithname.svg";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  
+  // Scroll to top when location changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   
   // Listen for scroll events
   useEffect(() => {
@@ -84,7 +90,7 @@ function Header() {
         <nav className="hidden md:flex justify-between items-center text-[#BBDFFF] space-x-8 lg:space-x-12 text-md">
           <span onClick={() => navigate("/")} className="cursor-pointer hover:text-white transition-colors duration-200">Home</span>
           <span onClick={() => navigate("/courses")} className="cursor-pointer hover:text-white transition-colors duration-200">Courses</span>
-          <span onClick={() => navigate("/")} className="cursor-pointer hover:text-white transition-colors duration-200">About</span>
+          <span onClick={() => navigate("/about")} className="cursor-pointer hover:text-white transition-colors duration-200">About</span>
           <span onClick={() => navigate("/contact")} className="cursor-pointer hover:text-white transition-colors duration-200">Contact</span>
         </nav>
         
