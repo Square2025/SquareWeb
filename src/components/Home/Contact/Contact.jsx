@@ -241,16 +241,9 @@ function Contact() {
                   >
                     <FaLinkedin size={24} />
                   </a>
+                  
                   <a 
-                    href="https://twitter.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="bg-white/5 hover:bg-[#9E67FF]/20 border border-white/10 p-3 rounded-lg text-gray-300 hover:text-white transition-all duration-300 hover:scale-110"
-                  >
-                    <FaTwitter size={24} />
-                  </a>
-                  <a 
-                    href="https://instagram.com" 
+                    href="https://www.instagram.com/thesquareducation/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-white/5 hover:bg-[#9E67FF]/20 border border-white/10 p-3 rounded-lg text-gray-300 hover:text-white transition-all duration-300 hover:scale-110"
@@ -263,24 +256,7 @@ function Contact() {
           </div>
           
           {/* Map Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="rounded-2xl overflow-hidden border border-white/10 shadow-xl h-[400px] mb-16"
-          >
-           
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d232.5723666409123!2d79.05504398416959!3d21.14611490102045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1746888874365!5m2!1sen!2sin" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen="" 
-              loading="lazy" 
-              referrerPolicy="no-referrer-when-downgrade"
-              title="The Square Education Location"
-            ></iframe>
-          </motion.div>
+          
           
           {/* FAQ Section */}
           <motion.div

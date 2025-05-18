@@ -51,7 +51,7 @@ function LRCSection() {
   ];
 
   return (
-    <div className="px-4 md:px-10 py-20 overflow-hidden relative">
+    <div className="px-4 md:px-10 py-20 overflow-hidden relative bg-white" >
       {/* Background decorations */}
       <div className="absolute -right-20 top-1/4 w-60 h-60 bg-[#9E67FF] rounded-full filter blur-[100px] opacity-5 z-0"></div>
       <div className="absolute -left-20 top-2/3 w-60 h-60 bg-[#013E5C] rounded-full filter blur-[100px] opacity-5 z-0"></div>
@@ -59,28 +59,28 @@ function LRCSection() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-16 py-40 space-y-16"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-block mb-3">
+          <div className="inline-block  ">
             <span className="bg-gradient-to-r from-[#9E67FF]/20 to-[#013E5C]/20 text-[#9E67FF] text-sm font-medium px-4 py-1.5 rounded-full border border-[#9E67FF]/20">
               Our Methodology
             </span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-7xl  text-black mb-4">
             Learn. <span className="text-[#9E67FF]">Churn.</span> Earn.
           </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto mt-4 text-lg">
+          <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-lg">
             Our comprehensive approach transforms beginners into industry-ready 
             professionals through a proven three-step methodology.
           </p>
         </motion.div>
 
         {/* Two-column layout with GIF and Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-black rounded-2xl px-10 py-10">
           {/* GIF Column */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -97,7 +97,7 @@ function LRCSection() {
               <img 
                 src={graphics} 
                 alt="Learn Churn Earn Process" 
-                className="w-full object-cover rounded-2xl"
+                className="w-[520%] object-cover rounded-2xl"
               />
               
               {/* Animated pulse effect */}

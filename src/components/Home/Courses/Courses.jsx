@@ -108,7 +108,7 @@ function Courses() {
     <motion.div 
       variants={itemVariants}
     
-      className="relative overflow-hidden rounded-2xl border border-white/10 shadow-xl backdrop-blur-sm bg-gradient-to-br from-black/60 to-[#121225]/80 group hover:shadow-2xl hover:shadow-[#9E67FF]/10 transition-all duration-500"
+      className="relative overflow-hidden rounded-2xl  border-black border-2 shadow-xl backdrop-blur-sm bg-white  group hover:shadow-2xl hover:shadow-[#9E67FF]/10 transition-all duration-500"
     >
       {/* Badge */}
       <div className="absolute top-4 left-4 z-30">
@@ -149,7 +149,7 @@ function Courses() {
         
         {/* Course Title on Image */}
         <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
-          <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-lg">{course.title}</h3>
+         
           
           {/* Rating and Students */}
           {/* <div className="flex items-center justify-between">
@@ -168,12 +168,12 @@ function Courses() {
       
       {/* Course Details */}
       <div className="p-5">
-        <p className="text-gray-300 mb-5 text-sm">{course.description}</p>
+        <p className="text-black mb-5 text-2xl font-semibold">{course.title}</p>
         
         {/* Features Grid */}
         <div className="grid grid-cols-2 gap-3 mb-6">
           {course.features.map((feature, idx) => (
-            <div key={idx} className="flex items-start text-gray-300">
+            <div key={idx} className="flex items-start text-black">
               <span className="text-[#9E67FF] mr-2 mt-1">{feature.icon}</span>
               <span className="text-xs">{feature.text}</span>
             </div>
@@ -181,20 +181,24 @@ function Courses() {
         </div>
         
         {/* CTA Button */}
-        <button onClick={()=>{navigate("/pre-course")}} className="w-full cursor-pointer py-3 rounded-xl font-medium transition-all duration-300 relative overflow-hidden group-hover:shadow-lg">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#9E67FF] to-[#6E45B5] opacity-90"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-[#9E67FF] to-[#013E5C] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          <span className="relative z-10 flex items-center justify-center text-white">
-            {course.status === "launching-soon" ? "Pre-Register Now" : "Enroll Now"}
-            <FaArrowRight className="ml-2 text-xs group-hover:translate-x-1 transition-transform duration-300" />
-          </span>
-        </button>
+        <button
+  onClick={() => {
+    window.location.href = "https://forms.gle/fcgTpbbBgXEqBW869";
+  }}
+  className="w-full border cursor-pointer py-3 rounded-xl font-medium transition-all duration-300 relative overflow-hidden group-hover:shadow-lg"
+>
+  <span className="relative z-10 flex items-center justify-center text-black">
+    {course.status === "launching-soon" ? "Pre-Register Now" : "Enroll Now"}
+    <FaArrowRight className="ml-2 text-xs group-hover:translate-x-1 transition-transform duration-300" />
+  </span>
+</button>
+
       </div>
     </motion.div>
   );
 
   return (
-    <div className="px-4 md:px-10 py-20 overflow-x-hidden">
+    <div className="px-4 md:px-10 py-20 overflow-x-hidden bg-white">
       <div className="max-w-7xl mx-auto relative">
         {/* Section Header */}
         <motion.div 
@@ -209,10 +213,10 @@ function Courses() {
               Level Up Your Skills
             </span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 relative">
+          <h2 className="text-3xl md:text-7xl  text-black mb-4 relative">
             Featured <span className="text-[#9E67FF]">Courses</span>
           </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto mt-4 text-lg">
+          <p className="text-gray-700 max-w-2xl mx-auto mt-4 text-lg">
             Elevate your skills with our carefully crafted courses designed to
             transform beginners into industry-ready professionals.
           </p>
@@ -231,11 +235,11 @@ function Courses() {
               <div className="bg-[#9E67FF]/10 p-2 rounded-lg">
                 <FaRocket className="text-[#9E67FF] text-2xl" />
               </div>
-              <h3 className="text-2xl font-bold text-white">Launching Soon</h3>
+              <h3 className="text-2xl font-semibold text-black">Launching Soon</h3>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1">
             {upcomingCourses.map((course) => (
               <CourseCard key={course.id} course={course} />
             ))}
@@ -256,10 +260,10 @@ function Courses() {
                   <div className="bg-[#9E67FF]/10 p-2 rounded-lg">
                     <FaCertificate className="text-[#9E67FF] text-2xl" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">Top Courses</h3>
+                  <h3 className="text-2xl font-bold text-black">Top Courses</h3>
                 </div>
                 <button
-                  className="group cursor-pointer flex items-center text-gray-300 hover:text-white transition-colors duration-300 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full px-5 py-2"
+                  className="group cursor-pointer flex items-center text-gray-700 hover:text-black transition-colors duration-300 bg-black/5 hover:bg-black/10 border border-black/10 rounded-full px-5 py-2"
                   onClick={handleNavigation}
                 >
                   <span className="mr-2 text-sm font-medium">

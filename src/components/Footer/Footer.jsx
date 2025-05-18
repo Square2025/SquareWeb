@@ -9,17 +9,16 @@ function Footer() {
   
   const navLinks = [
     { name: "About Us", navigate: "/about" },
-    { name: "Courses", navigate: "/courses" },
-    { name: "Community", navigate: "/" },
+    // { name: "Courses", navigate: "/courses" },
+    // { name: "Community", navigate: "/" },
     // { name: "Blog", navigate: "/" },
     { name: "Terms ", navigate: "/terms" },
     { name: "Privacy ", navigate: "/privacy" }
   ];
   
   const socialLinks = [
-    { icon: <FaLinkedin size={20} />, href: "https://www.linkedin.com/company/thesquareducation/", label: "LinkedIn" },
-    { icon: <FaTwitter size={20} />, href: "https://twitter.com", label: "Twitter" },
-    { icon: <FaInstagram size={20} />, href: "https://instagram.com", label: "Instagram" },
+    { icon: <FaLinkedin size={20} />, href: "https://www.linkedin.com/company/thesquareducation/", label: "LinkedIn" },  
+    { icon: <FaInstagram size={20} />, href: "https://www.instagram.com/thesquareducation/", label: "Instagram" },
   ];
 
   const containerVariants = {
@@ -44,7 +43,7 @@ function Footer() {
   };
 
   return (
-    <footer className="bg-[#0A0A1A]/30 text-gray-300 pt-16 pb-8 border-t border-white/10 relative overflow-hidden">
+    <footer className="bg-black/30 text-gray-300 pt-16 pb-8 border-t border-white/10 relative overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#9E67FF] rounded-full filter blur-[120px] opacity-10"></div>
       <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#013E5C] rounded-full filter blur-[120px] opacity-10"></div>

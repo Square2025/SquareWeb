@@ -109,21 +109,21 @@ function WhySquare() {
   };
 
   return (
-    <div className="px-4 md:px-10 py-20 overflow-hidden ">
+    <div className="px-4 md:px-10 py-20 overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-16 py-10"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 relative inline-block">
+          <h2 className="text-3xl md:text-7xl  text-black mb-4 relative inline-block">
             Why Students <span className="text-[#9E67FF]">Trust Us</span>
             <div className="absolute -bottom-3 left-0 w-full h-1.5 bg-gradient-to-r from-[#9E67FF] to-[#013E5C] rounded-full"></div>
           </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto mt-6 text-lg">
+          <p className="text-gray-700 max-w-2xl mx-auto mt-6 text-lg">
             At Square, we're redefining education by focusing on practical skills, real-world projects, and career outcomes.
           </p>
         </motion.div>
@@ -139,19 +139,19 @@ function WhySquare() {
           {reasons.map((reason, index) => (
             <motion.div 
               key={index}
-              className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-xl p-6 hover:shadow-lg hover:shadow-[#9E67FF]/30 transition-all duration-300 border border-white/10 group"
+              className="bg-gradient-to-br from-black/10 to-black/5 backdrop-blur-md rounded-xl p-6 hover:shadow-lg hover:shadow-[#9E67FF]/30 transition-all duration-300 border border-black/10 group"
               variants={itemVariants}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
             >
               <div className="text-[#9E67FF] text-4xl mb-5 transform group-hover:scale-110 transition-transform duration-300">{reason.icon}</div>
-              <h3 className="text-white text-xl font-semibold mb-3">{reason.title}</h3>
-              <p className="text-gray-300">{reason.description}</p>
+              <h3 className="text-black text-xl font-semibold mb-3">{reason.title}</h3>
+              <p className="text-gray-700">{reason.description}</p>
             </motion.div>
           ))}
         </motion.div>
 
         {/* Testimonials Carousel - Enhanced Version */}
-        <div className="mb-16">
+        {/* <div className="mb-16">
           <motion.h3 
             className="text-2xl md:text-3xl font-bold text-white mb-12 text-center"
             initial={{ opacity: 0 }}
@@ -162,7 +162,7 @@ function WhySquare() {
           </motion.h3>
           
           <div className="relative max-w-4xl mx-auto">
-            {/* Decorative elements */}
+           
             <div className="absolute -top-6 -left-6 w-12 h-12 rounded-full bg-gradient-to-br from-[#9E67FF] to-[#013E5C] opacity-40 blur-lg"></div>
             <div className="absolute -bottom-6 -right-6 w-12 h-12 rounded-full bg-gradient-to-br from-[#9E67FF] to-[#013E5C] opacity-40 blur-lg"></div>
             
@@ -215,7 +215,7 @@ function WhySquare() {
               </motion.div>
             </motion.div>
             
-            {/* Navigation Buttons - Enhanced */}
+         
             <button 
               onClick={prevTestimonial}
               className="absolute left-0 md:-left-5 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-[#9E67FF] text-white p-3 rounded-full transition-all duration-300 shadow-lg shadow-black/20 border border-white/10 z-10"
@@ -233,7 +233,7 @@ function WhySquare() {
               <FaChevronRight />
             </button>
             
-            {/* Dots Indicator - Enhanced */}
+          
             <div className="flex justify-center mt-8 gap-2">
               {testimonials.map((_, index) => (
                 <button
@@ -249,10 +249,10 @@ function WhySquare() {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
         
         {/* CTA Button - Enhanced */}
-        <motion.div 
+        {/* <motion.div 
           className="text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -263,7 +263,7 @@ function WhySquare() {
             Join Our Community
           </button>
           <div className="mt-4 text-gray-400 text-sm">Join 10,000+ students already learning with us</div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );

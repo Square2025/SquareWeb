@@ -23,7 +23,7 @@ function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex flex-col text-3xl md:text-4xl font-semibold">
+            <div className="flex flex-col text-3xl text-semibold md:text-4xl  font-sans">
               <TypeAnimation
                 sequence={[
                   '"Where Skills Keeps Your Away From Corners"',
@@ -40,7 +40,7 @@ function Home() {
               />
             </div>
             <motion.div
-              className="w-full md:w-[300px] text-sm md:text-base"
+              className="w-full md:w-[300px] text-sm  md:text-base"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
@@ -49,7 +49,7 @@ function Home() {
               fostering a lifelong love of learning. Discover innovative courses
               and tools that empower you to excel.
             </motion.div>
-            <motion.div
+            {/* <motion.div
               className="bg-[#9E67FF] w-full md:w-auto md:inline-block text-center py-2 px-6 rounded-md cursor-pointer hover:drop-shadow-md hover:drop-shadow-white/40 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -58,7 +58,7 @@ function Home() {
               transition={{ delay: 0.8, duration: 0.5 }}
             >
               Join Now
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           {/* Hero image - Adjusted positioning with mt-negative value and self-center */}

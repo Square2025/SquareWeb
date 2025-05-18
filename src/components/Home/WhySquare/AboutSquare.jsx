@@ -48,7 +48,7 @@ navigate("/courses")
             animate="visible"
             variants={fadeIn}
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl  text-white mb-6">
               Welcome to <span className="text-[#9E67FF]">Square</span>
             </h1>
             <h2 className="text-xl md:text-2xl text-gray-300 italic mb-8">
@@ -176,7 +176,7 @@ navigate("/courses")
           </motion.div>
           
           {/* Call to Action */}
-          <motion.div
+          {/* <motion.div
             className="text-center"
             initial="hidden"
             whileInView="visible"
@@ -192,7 +192,7 @@ navigate("/courses")
             <button onClick={handleNavigation} className="px-8 py-4 bg-gradient-to-r from-[#9E67FF] to-[#6E45B5] text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:scale-105">
               Explore Our Courses
             </button>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
       

@@ -79,7 +79,7 @@ function Header() {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-black/30 backdrop-blur-md shadow-lg shadow-black/10 py-3' : 'bg-transparent py-6 md:py-10'
+      scrolled ? 'bg-black/60 backdrop-blur-md shadow-lg shadow-black/10 py-3' : 'bg-transparent py-6 md:py-10'
     }`}>
       <div className="flex items-center justify-between px-4 md:px-10 w-full">
         <div className="w-[50%] md:w-[70%]">
@@ -89,7 +89,7 @@ function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex justify-between items-center text-[#BBDFFF] space-x-8 lg:space-x-12 text-md">
           <span onClick={() => navigate("/")} className="cursor-pointer hover:text-white transition-colors duration-200">Home</span>
-          <span onClick={() => navigate("/courses")} className="cursor-pointer hover:text-white transition-colors duration-200">Courses</span>
+          {/* <span onClick={() => navigate("/courses")} className="cursor-pointer hover:text-white transition-colors duration-200">Courses</span> */}
           <span onClick={() => navigate("/about")} className="cursor-pointer hover:text-white transition-colors duration-200">About</span>
           <span onClick={() => navigate("/contact")} className="cursor-pointer hover:text-white transition-colors duration-200">Contact</span>
         </nav>
@@ -130,7 +130,7 @@ function Header() {
               >
                 Home
               </motion.span>
-              <motion.span 
+              {/* <motion.span 
                 className="py-3 border-b border-white/10 text-[#BBDFFF] hover:text-white transition-colors duration-200 cursor-pointer"
                 variants={itemVariants}
                 onClick={() => {
@@ -139,12 +139,12 @@ function Header() {
                 }}
               >
                 Courses
-              </motion.span>
+              </motion.span> */}
               <motion.span 
                 className="py-3 border-b border-white/10 text-[#BBDFFF] hover:text-white transition-colors duration-200 cursor-pointer"
                 variants={itemVariants}
                 onClick={() => {
-                  navigate("/");
+                  navigate("/about");
                   setMobileMenuOpen(false);
                 }}
               >
