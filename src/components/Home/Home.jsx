@@ -45,9 +45,9 @@ function Home() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
             >
-              Join a vibrant community of students and educators dedicated to
-              fostering a lifelong love of learning. Discover innovative courses
-              and tools that empower you to excel.
+              Get Skilled. Apply what you learned. Become Employable.
+
+At Square, we bridge the gap between learning and earning. With practical, affordable courses and hands-on projects, we equip you with real-world skills that make you truly employable in today’s job market.
             </motion.div>
             {/* <motion.div
               className="bg-[#9E67FF] w-full md:w-auto md:inline-block text-center py-2 px-6 rounded-md cursor-pointer hover:drop-shadow-md hover:drop-shadow-white/40 transition-all duration-300"

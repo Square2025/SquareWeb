@@ -29,21 +29,21 @@ function LRCSection() {
   const processSteps = [
     {
       title: "Learn",
-      desc: "Master job-ready skills through hands-on, industry-focused courses.",
+      desc: "Pick up real-world skills through courses that don’t just talk — they make you do",
       icon: <FaGraduationCap className="text-2xl md:text-3xl text-[#9E67FF]" />,
       bgGradient: "from-[#9E67FF]/10 to-[#9E67FF]/20",
       iconBg: "bg-[#9E67FF]/20"
     },
     {
       title: "Churn",
-      desc: "Break it. Build it. Repeat. Challenges that turn learners into pros.",
+      desc: "Mess up. Fix it. Master it. Build stuff, Learn by failing forward. Challenges that turn effort into expertise",
       icon: <FaTools className="text-2xl md:text-3xl text-[#9E67FF]" />,
       bgGradient: "from-[#9E67FF]/15 to-[#013E5C]/15",
       iconBg: "bg-[#9E67FF]/20"
     },
     {
       title: "Earn",
-      desc: "Freelance gigs and internships that reward your new skills.",
+      desc: "Cash in on your grind with freelance gigs, internships, and paid opportunities",
       icon: <FaMoneyBillWave className="text-2xl md:text-3xl text-[#9E67FF]" />,
       bgGradient: "from-[#013E5C]/15 to-[#9E67FF]/15",
       iconBg: "bg-[#9E67FF]/20"
@@ -67,15 +67,15 @@ function LRCSection() {
         >
           <div className="inline-block  ">
             <span className="bg-gradient-to-r from-[#9E67FF]/20 to-[#013E5C]/20 text-[#9E67FF] text-sm font-medium px-4 py-1.5 rounded-full border border-[#9E67FF]/20">
-              Our Methodology
+            The Square Way
+
             </span>
           </div>
           <h2 className="text-3xl md:text-7xl  text-black mb-4">
             Learn. <span className="text-[#9E67FF]">Churn.</span> Earn.
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-lg">
-            Our comprehensive approach transforms beginners into industry-ready 
-            professionals through a proven three-step methodology.
+          We turn rookies into rockstars with our 3-step grind: Learn smart, build real, and land big.
           </p>
         </motion.div>
 
@@ -97,7 +97,7 @@ function LRCSection() {
               <img 
                 src={graphics} 
                 alt="Learn Churn Earn Process" 
-                className="w-[520%] object-cover rounded-2xl"
+                className="w-[520%]  rounded-2xl"
               />
               
               {/* Animated pulse effect */}
@@ -134,7 +134,7 @@ function LRCSection() {
                 }}
               >
                 {/* Step Number - Adjusted z-index and opacity for better mobile display */}
-                <div className="absolute right-3 top-2 text-7xl font-bold  md:text-white/5 text-white/3 z-0">
+                <div className="absolute right-3 top-2 text-7xl font-bold  md:text-white/15 text-white/3 z-0">
                   {idx + 1}
                 </div>
                 
@@ -146,7 +146,7 @@ function LRCSection() {
                 {/* Content - Added z-10 to ensure it stays above the number */}
                 <div className="relative z-10 max-w-[calc(100%-60px)]">
                   <h3 className="text-xl font-bold text-white mb-1">{step.title}</h3>
-                  <p className="text-gray-300 text-sm break-words">
+                  <p className="text-gray-300 text-sm break-words md:w-[450px] lg:w-[450px] xl:w-[450px]">
                     {step.desc}
                   </p>
                 </div>

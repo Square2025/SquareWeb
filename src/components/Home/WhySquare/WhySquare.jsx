@@ -6,23 +6,23 @@ function WhySquare() {
   const reasons = [
     {
       icon: <FaRocket />,
-      title: "Startup-style learning experience",
-      description: "Learn by building real products in a fast-paced environment that mimics actual startups."
+      title: "Startup Simulation Learning",
+      description: "Experience the real startup grind by building products in a fast-paced, hands-on simulation."
     },
     {
       icon: <FaUsers />,
-      title: "Peer collaboration and mentorship",
-      description: "Work alongside like-minded peers and receive guidance from industry professionals."
+      title: "Peer-to-Peer Power",
+      description: "Learn, collaborate, and level up together with like-minded peers."
     },
     {
       icon: <FaMoneyBillWave />,
-      title: "Earn-through-skills model",
-      description: "Start earning while you're learning through freelance opportunities and real projects."
+      title: "Earn While You Learn",
+      description: "Get paid gigs and projects as you sharpen your skills."
     },
     {
       icon: <FaBriefcase />,
-      title: "Portfolio-worthy projects",
-      description: "Build impressive projects that stand out to employers and clients."
+      title: "Projects That Pop",
+      description: "Build portfolio-worthy work that grabs employers’ attention."
     }
   ];
 
@@ -119,12 +119,13 @@ function WhySquare() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-7xl  text-black mb-4 relative inline-block">
-            Why Students <span className="text-[#9E67FF]">Trust Us</span>
+          <h2 className="text-3xl md:text-6xl  text-black mb-4 relative inline-block">
+          Why Learners Level Up 
+          <span className="text-[#9E67FF]"> With Square</span>
             <div className="absolute -bottom-3 left-0 w-full h-1.5 bg-gradient-to-r from-[#9E67FF] to-[#013E5C] rounded-full"></div>
           </h2>
           <p className="text-gray-700 max-w-2xl mx-auto mt-6 text-lg">
-            At Square, we're redefining education by focusing on practical skills, real-world projects, and career outcomes.
+          We’re not here to lecture — we’re here to launch careers.
           </p>
         </motion.div>
 

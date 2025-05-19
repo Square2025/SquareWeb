@@ -210,15 +210,15 @@ function Courses() {
         >
           <div className="inline-block mb-3">
             <span className="bg-gradient-to-r from-[#9E67FF]/20 to-[#013E5C]/20 text-[#9E67FF] text-sm font-medium px-4 py-1.5 rounded-full border border-[#9E67FF]/20">
-              Level Up Your Skills
+            Power Up Your Skills
+
             </span>
           </div>
           <h2 className="text-3xl md:text-7xl  text-black mb-4 relative">
-            Featured <span className="text-[#9E67FF]">Courses</span>
+          Spotlight <span className="text-[#9E67FF]">Courses</span>
           </h2>
           <p className="text-gray-700 max-w-2xl mx-auto mt-4 text-lg">
-            Elevate your skills with our carefully crafted courses designed to
-            transform beginners into industry-ready professionals.
+          No boring theory here. Just skill-packed, project-based courses that help you build confidence and get hired faster.
           </p>
         </motion.div>
 
