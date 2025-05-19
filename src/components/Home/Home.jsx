@@ -26,7 +26,7 @@ function Home() {
             <div className="flex flex-col text-3xl text-semibold md:text-4xl  font-sans">
               <TypeAnimation
                 sequence={[
-                  '"Where Skills Keeps Your Away From Corners"',
+                  '"Where Skills Keeps You Away From Corners"',
                   1000,
                   '"Where Skills Empower Your Future"',
                   1000,
