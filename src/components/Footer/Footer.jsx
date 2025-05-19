@@ -97,7 +97,7 @@ function Footer() {
             <div className="space-y-3 text-gray-400">
               <p>hr@thesquareducation.com</p>
               
-              <p>63 A,Ramnagar,Nagpur</p>
+              <p>653 A,Ramnagar,Nagpur</p>
             </div>
           </div>
           

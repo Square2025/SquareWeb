@@ -205,7 +205,7 @@ function Contact() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Our Location</h3>
-                    <p className="text-gray-300">63 A, Ramnagar, Nagpur, Maharashtra, India</p>
+                    <p className="text-gray-300">653 A, Ramnagar, Nagpur, Maharashtra, India</p>
                   </div>
                 </motion.div>
                 

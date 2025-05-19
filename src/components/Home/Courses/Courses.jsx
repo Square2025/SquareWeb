@@ -198,7 +198,7 @@ function Courses() {
   );
 
   return (
-    <div className="px-4 md:px-10 py-20 overflow-x-hidden bg-white">
+    <div className="px-4 md:px-10 py-20 overflow-x-hidden bg-[#E8F7F3]">
       <div className="max-w-7xl mx-auto relative">
         {/* Section Header */}
         <motion.div 
@@ -208,16 +208,16 @@ function Courses() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-block mb-3">
-            <span className="bg-gradient-to-r from-[#9E67FF]/20 to-[#013E5C]/20 text-[#9E67FF] text-sm font-medium px-4 py-1.5 rounded-full border border-[#9E67FF]/20">
+          <div className="inline-block mb-30">
+            <span className="bg-gradient-to-r from-[#9E67FF]/20 to-[#013E5C]/20 text-[#9E67FF] text-2xl font-medium px-4 py-1.5 rounded-full border border-[#9E67FF]/20">
             Power Up Your Skills
 
             </span>
           </div>
-          <h2 className="text-3xl md:text-7xl  text-black mb-4 relative">
+          <h2 className="text-3xl md:text-8xl  text-black mb-4 relative">
           Spotlight <span className="text-[#9E67FF]">Courses</span>
           </h2>
-          <p className="text-gray-700 max-w-2xl mx-auto mt-4 text-lg">
+          <p className="text-gray-700 max-w-2xl mx-auto mt-10 text-lg">
           No boring theory here. Just skill-packed, project-based courses that help you build confidence and get hired faster.
           </p>
         </motion.div>

@@ -51,7 +51,7 @@ function LRCSection() {
   ];
 
   return (
-    <div className="px-4 md:px-10 py-20 overflow-hidden relative bg-white" >
+    <div className="px-4 md:px-10 py-20 overflow-hidden relative bg-[#E8F7F3]" >
       {/* Background decorations */}
       <div className="absolute -right-20 top-1/4 w-60 h-60 bg-[#9E67FF] rounded-full filter blur-[100px] opacity-5 z-0"></div>
       <div className="absolute -left-20 top-2/3 w-60 h-60 bg-[#013E5C] rounded-full filter blur-[100px] opacity-5 z-0"></div>
@@ -66,12 +66,12 @@ function LRCSection() {
           transition={{ duration: 0.6 }}
         >
           <div className="inline-block  ">
-            <span className="bg-gradient-to-r from-[#9E67FF]/20 to-[#013E5C]/20 text-[#9E67FF] text-sm font-medium px-4 py-1.5 rounded-full border border-[#9E67FF]/20">
+            <span className="bg-gradient-to-r from-[#9E67FF]/20 to-[#013E5C]/20 text-[#9E67FF] text-2xl font-medium px-4 py-1.5 rounded-full border border-[#9E67FF]/20">
             The Square Way
 
             </span>
           </div>
-          <h2 className="text-3xl md:text-7xl  text-black mb-4">
+          <h2 className="text-3xl md:text-9xl  text-black mb-4">
             Learn. <span className="text-[#9E67FF]">Churn.</span> Earn.
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-lg">

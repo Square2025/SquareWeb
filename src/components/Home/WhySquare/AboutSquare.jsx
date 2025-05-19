@@ -56,9 +56,13 @@ navigate("/courses")
             </h2>
             <div className="max-w-3xl mx-auto">
               <p className="text-gray-300 text-lg leading-relaxed">
-                At 'Square,' we're redefining education through our groundbreaking ed-tech platform. 
-                Our aim is to transform the educational landscape by prioritizing skills and values. 
-                With Square, you gain access to top-notch learning experiences at unbelievable pricing.
+                At Square, we’re not just another ed-tech platform — we’re a revolution.
+We're flipping the script on traditional education by putting real-world skills and values front and center. Forget boring theory and overpriced courses — with Square, you get hands-on learning, industry-relevant content, and career-ready skills that actually matter.
+
+Learn smarter. Build faster. Pay lesser.
+Top-tier education, ridiculously affordable pricing, and vibes that match your hustle — that’s the Square promise.
+
+It’s not just education. It’s evolution. Welcome to Square.
               </p>
             </div>
           </motion.div>
@@ -75,7 +79,7 @@ navigate("/courses")
               className="text-2xl md:text-3xl font-bold text-white mb-10 text-center"
               variants={fadeIn}
             >
-              Our Three-fold Approach
+              Three Pillars. One Vision.
             </motion.h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -89,7 +93,8 @@ navigate("/courses")
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Learn</h3>
                 <p className="text-gray-300">
-                  Enrich your knowledge through affordable courses designed by industry experts.
+                  Level up with budget-friendly courses crafted by real industry pros. No fluff, just the good stuff that actually matters.
+
                 </p>
               </motion.div>
               
@@ -103,7 +108,8 @@ navigate("/courses")
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Churn</h3>
                 <p className="text-gray-300">
-                  Apply what you've learned through practical projects and worksheets that reinforce your skills.
+                  Get your hands dirty with real-world projects and challenges that turn knowledge into skill.
+
                 </p>
               </motion.div>
               
@@ -117,7 +123,7 @@ navigate("/courses")
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Earn</h3>
                 <p className="text-gray-300">
-                  Seal your journey with internships, freelancing and job opportunities to showcase your mastery.
+                 Put your skills to work — land internships, freelance gigs, or jobs that let you flex what you’ve mastered.
                 </p>
               </motion.div>
             </div>
@@ -138,12 +144,12 @@ navigate("/courses")
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div>
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  It's more than merely imparting skills at 'Square,' it's about ensuring job prospects upon successful course completion. 
-                  We believe in accelerating your success by fostering learning, practice, and progress.
+                  At Square, we’re not just teaching skills — we’re building futures. Every course is designed with one clear goal: helping you become employable and land real job opportunities once you’re done.
+
                 </p>
-                <p className="text-gray-300 text-lg leading-relaxed">
-                  Furthermore, we are committed to developing a youth network ecosystem by integrating innovative methods with unique teaching techniques.
-                  This synergy aims to evolve students into all-round performers, preparing them for the challenges of tomorrow's world.
+                <p className="text-gray-300 text-lg leading-relaxed ">We believe in fast-tracking your success through a simple but powerful formula: learn it, apply it, own it.</p>
+                <p className="text-gray-300 text-lg leading-relaxed mt-6">
+                  But that’s not all. We’re creating a vibrant youth ecosystem — blending fresh ideas with next-gen teaching methods to shape all-rounders who are ready to take on the real world. Because your growth isn’t just about knowledge — it’s about becoming unstoppable, confident, and career-ready.
                 </p>
               </div>
               
@@ -151,25 +157,28 @@ navigate("/courses")
                 <div className="bg-black/30 backdrop-blur-sm border border-white/10 rounded-xl p-6">
                   <FaUsers className="text-[#9E67FF] text-3xl mb-4" />
                   <h3 className="text-white font-semibold text-lg mb-2">Community Focused</h3>
-                  <p className="text-gray-400">Building a network of skilled professionals who support each other.</p>
+                  <p className="text-gray-400">We’re building a supportive network of learners, mentors, and professionals who grow together and lift each other up.
+</p>
                 </div>
                 
                 <div className="bg-black/30 backdrop-blur-sm border border-white/10 rounded-xl p-6">
                   <FaRocket className="text-[#9E67FF] text-3xl mb-4" />
                   <h3 className="text-white font-semibold text-lg mb-2">Career Acceleration</h3>
-                  <p className="text-gray-400">Fast-track your career with our industry-aligned curriculum.</p>
+                  <p className="text-gray-400">Our entire ecosystem is designed to help you become employable faster, with content that mirrors what today’s job market demands.
+</p>
                 </div>
                 
                 <div className="bg-black/30 backdrop-blur-sm border border-white/10 rounded-xl p-6">
                   <FaLightbulb className="text-[#9E67FF] text-3xl mb-4" />
                   <h3 className="text-white font-semibold text-lg mb-2">Innovative Learning</h3>
-                  <p className="text-gray-400">Unique teaching methods that make complex concepts accessible.</p>
+                  <p className="text-gray-400">From bite-sized lessons to real-world simulations, our unique teaching methods make complex concepts easy to understand and even easier to apply.
+</p>
                 </div>
                 
                 <div className="bg-black/30 backdrop-blur-sm border border-white/10 rounded-xl p-6">
                   <FaGraduationCap className="text-[#9E67FF] text-3xl mb-4" />
                   <h3 className="text-white font-semibold text-lg mb-2">Holistic Development</h3>
-                  <p className="text-gray-400">Focus on creating well-rounded professionals ready for any challenge.</p>
+                  <p className="text-gray-400">We shape well-rounded professionals — blending technical skills, soft skills, and real-world experience so you’re ready for whatever comes next.</p>
                 </div>
               </div>
             </div>
