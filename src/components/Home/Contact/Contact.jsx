@@ -259,7 +259,7 @@ function Contact() {
           
           
           {/* FAQ Section */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -303,7 +303,7 @@ function Contact() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
       </main>
       
