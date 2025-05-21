@@ -104,98 +104,86 @@ function Courses() {
   };
 
   // Course card component
-  const CourseCard = ({ course }) => (
-    <motion.div 
-      variants={itemVariants}
+const CourseCard = ({ course }) => (
+  <motion.div 
+    variants={itemVariants}
+    className="relative overflow-hidden rounded-2xl border-black border-2 shadow-xl backdrop-blur-sm bg-white group hover:shadow-2xl hover:shadow-[#9E67FF]/10 transition-all duration-500"
+  >
+    {/* Badge */}
+    <div className="absolute top-4 left-4 z-30">
+      <div className="bg-black/70 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center backdrop-blur-md border border-white/10">
+        {course.badge === "Most Anticipated" && <FaRocket className="mr-1 text-[#9E67FF]" />}
+        {course.badge === "Bestseller" && <FaStar className="mr-1 text-yellow-400" />}
+        {course.badge === "Trending" && <FaFire className="mr-1 text-orange-500" />}
+        {course.badge}
+      </div>
+    </div>
     
-      className="relative overflow-hidden rounded-2xl  border-black border-2 shadow-xl backdrop-blur-sm bg-white  group hover:shadow-2xl hover:shadow-[#9E67FF]/10 transition-all duration-500"
-    >
-      {/* Badge */}
-      <div className="absolute top-4 left-4 z-30">
-        <div className="bg-black/70 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center backdrop-blur-md border border-white/10">
-          {course.badge === "Most Anticipated" && <FaRocket className="mr-1 text-[#9E67FF]" />}
-          {course.badge === "Bestseller" && <FaStar className="mr-1 text-yellow-400" />}
-          {course.badge === "Trending" && <FaFire className="mr-1 text-orange-500" />}
-          {course.badge}
+    {/* Status Badge */}
+    <div className="absolute top-4 right-4 z-30">
+      {course.status === "launching-soon" ? (
+        <div className="bg-[#9E67FF]/80 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center backdrop-blur-md">
+          <FaRocket className="mr-1" /> Launching Soon
         </div>
+      ) : (
+        <div className="bg-black/70 text-white px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-md border border-white/10">
+          Available Now
+        </div>
+      )}
+    </div>
+    
+    {/* Course Image */}
+    <div className="relative h-52 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60 z-10"></div>
+      <img
+        src={course.image}
+        alt={course.title}
+        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+      />
+      
+      {/* Course Title on Image */}
+      <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
+      </div>
+    </div>
+    
+    {/* Course Details */}
+    <div className="p-5">
+      <p className="text-black mb-5 text-2xl font-semibold">{course.title}</p>
+      
+      {/* Price Section */}
+      <div className="flex items-center mb-4">
+        <span className="text-xl font-bold text-[#9E67FF]">₹249</span>
+        <span className="ml-2 text-sm text-gray-500 line-through">MRP ₹419</span>
+        <span className="ml-2 text-xs bg-green-100 text-green-800 px-2 py-1 rounded">
+          {Math.round((1 - 249/419) * 100)}% OFF
+        </span>
       </div>
       
-      {/* Status Badge */}
-      <div className="absolute top-4 right-4 z-30">
-        {course.status === "launching-soon" ? (
-          <div className="bg-[#9E67FF]/80 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center backdrop-blur-md">
-            <FaRocket className="mr-1" /> Launching Soon
+      {/* Features Grid */}
+      <div className="grid grid-cols-2 gap-3 mb-6">
+        {course.features.map((feature, idx) => (
+          <div key={idx} className="flex items-start text-black">
+            <span className="text-[#9E67FF] mr-2 mt-1">{feature.icon}</span>
+            <span className="text-xs">{feature.text}</span>
           </div>
-        ) : (
-          <div className="bg-black/70 text-white px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-md border border-white/10">
-            Available Now
-          </div>
-        )}
+        ))}
       </div>
       
-      {/* Bookmark button */}
-      {/* <button className="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 bg-black/50 p-2 rounded-full backdrop-blur-md text-white hover:bg-[#9E67FF]/70 transition-all duration-300 transform translate-y-2 group-hover:translate-y-16">
-        <FaBookmark />
-      </button> */}
-      
-      {/* Course Image */}
-      <div className="relative h-52 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60 z-10"></div>
-        <img
-          src={course.image}
-          alt={course.title}
-          className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-        />
-        
-        {/* Course Title on Image */}
-        <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
-         
-          
-          {/* Rating and Students */}
-          {/* <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              <div className="flex items-center mr-3">
-                {[...Array(5)].map((_, i) => (
-                  <FaStar key={i} className={`text-xs ${i < Math.floor(course.rating) ? "text-yellow-400" : "text-gray-500"}`} />
-                ))}
-                <span className="ml-1 text-white text-xs">{course.rating}</span>
-              </div>
-              <span className="text-gray-300 text-xs">{course.students} students</span>
-            </div>
-          </div> */}
-        </div>
-      </div>
-      
-      {/* Course Details */}
-      <div className="p-5">
-        <p className="text-black mb-5 text-2xl font-semibold">{course.title}</p>
-        
-        {/* Features Grid */}
-        <div className="grid grid-cols-2 gap-3 mb-6">
-          {course.features.map((feature, idx) => (
-            <div key={idx} className="flex items-start text-black">
-              <span className="text-[#9E67FF] mr-2 mt-1">{feature.icon}</span>
-              <span className="text-xs">{feature.text}</span>
-            </div>
-          ))}
-        </div>
-        
-        {/* CTA Button */}
-        <button
-  onClick={() => {
-    window.location.href = "https://forms.gle/fcgTpbbBgXEqBW869";
-  }}
-  className="w-full border cursor-pointer py-3 rounded-xl font-medium transition-all duration-300 relative overflow-hidden group-hover:shadow-lg"
->
-  <span className="relative z-10 flex items-center justify-center text-black">
-    {course.status === "launching-soon" ? "Pre-Register Now" : "Enroll Now"}
-    <FaArrowRight className="ml-2 text-xs group-hover:translate-x-1 transition-transform duration-300" />
-  </span>
-</button>
-
-      </div>
-    </motion.div>
-  );
+      {/* CTA Button */}
+      <button
+        onClick={() => {
+          window.location.href = "https://forms.gle/fcgTpbbBgXEqBW869";
+        }}
+        className="w-full border cursor-pointer py-3 rounded-xl font-medium transition-all duration-300 relative overflow-hidden group-hover:shadow-lg"
+      >
+        <span className="relative z-10 flex items-center justify-center text-black">
+          {course.status === "launching-soon" ? "Pre-Register Now" : "Enroll Now"}
+          <FaArrowRight className="ml-2 text-xs group-hover:translate-x-1 transition-transform duration-300" />
+        </span>
+      </button>
+    </div>
+  </motion.div>
+);
 
   return (
     <div className="px-4 md:px-10 py-20 overflow-x-hidden bg-[#E8F7F3]">
