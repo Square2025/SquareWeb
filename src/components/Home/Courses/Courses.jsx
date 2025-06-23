@@ -172,7 +172,7 @@ const CourseCard = ({ course }) => (
       {/* CTA Button */}
       <button
         onClick={() => {
-          window.location.href = "https://forms.gle/fcgTpbbBgXEqBW869";
+          window.location.href = "https://forms.gle/gpaxHRrYXHR1UyhU6";
         }}
         className="w-full border cursor-pointer py-3 rounded-xl font-medium transition-all duration-300 relative overflow-hidden group-hover:shadow-lg"
       >
